@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <div>
+    <div class="pb-12">
         <BaseHeader />
         <NuxtPage />
     </div>

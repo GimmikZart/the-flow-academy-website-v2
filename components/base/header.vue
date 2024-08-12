@@ -36,10 +36,10 @@ const routes = [
 
 </script>
 <template>
-    <header class="fixed bottom-0 left-0 w-full flex flex-col">
+    <header class="fixed bottom-0 left-0 w-full flex flex-col z-50">
         <!-- MENU -->
-        <section v-if="menuIsOpen" class="w-full bg-black/50 backdrop:blur-3 p-10 grid grid-cols-3 gap-2">
-            <NuxtLink v-for="(route, idx) in routes" :key="idx" :to="route.to" class="p-3 border-2 flex flex-col items-center justify-center">
+        <section v-if="menuIsOpen" class="w-full bg-black/50 backdrop-blur-sm p-10 grid grid-cols-3 gap-2">
+            <NuxtLink v-for="(route, idx) in routes" :key="idx" :to="route.to" class="p-3 border-2 flex flex-col items-center justify-center" @click="menuIsOpen = false">
                 <Icon :name="route.icon" class="text-white w-full h-auto aspect-square"/>
                 <p class="text-white text-center">{{ route.name }}</p>
             </NuxtLink>
